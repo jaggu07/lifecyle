@@ -1,0 +1,15 @@
+<ion-view view-title="Search The Movie Database"> 
+      <ion-content>
+      <button class="button button-stable" ng-click="doRefresh()">click</button>
+        <ion-list>
+          <div class="list">
+            <a ng-repeat="movie in movies" href="#/movie/{{movie.id}}" class="item item-thumbnail-left">
+              <img ng-src="https://image.tmdb.org/t/p/w92{{movie.poster_path}}" onerror="this.src = 'https://www.ginesisnatural.com/images/no_image.jpg';">
+              <h2>{{movie.original_title}}</h2>
+              <h4>{{movie.release_date}}</h4>
+            </a>
+  
+          </div>
+        </ion-list>
+      </ion-content>
+    </ion-view>    
